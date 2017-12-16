@@ -8,7 +8,6 @@ public class Acceptor2 implements IfAcceptable {
 	public void accept(IfVisitable visitor) {
 
 		Utils.giveMyName(this);
-		Utils.welcome(visitor);
 
 		visitor.visit(this);
 	}

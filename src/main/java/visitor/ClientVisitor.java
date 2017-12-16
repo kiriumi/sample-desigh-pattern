@@ -1,8 +1,10 @@
 package visitor;
 
+import util.Utils;
+
 public class ClientVisitor {
 
-	public static void main (String... args) {
+	public static void main(String... args) {
 
 		IfVisitable visitor1 = new Visitor1();
 		IfVisitable visitor2 = new Visitor2();
@@ -11,9 +13,14 @@ public class ClientVisitor {
 		IfAcceptable acceptor2 = new Acceptor2();
 
 		acceptor1.accept(visitor1);
+		Utils.printNewLine();
+
 		acceptor1.accept(visitor2);
+		Utils.printNewLine();
 
 		acceptor2.accept(visitor1);
+		Utils.printNewLine();
+
 		acceptor2.accept(visitor2);
 	}
 }
