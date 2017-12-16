@@ -14,11 +14,8 @@ public class Battle {
 		this.stragety = factory.create();
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	public void doStragety() {
+		System.out.print(name + ": ");
 		stragety.execute();
 	}
 
