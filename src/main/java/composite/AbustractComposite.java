@@ -6,11 +6,10 @@ import java.util.stream.Stream;
 
 import util.Utils;
 
-public abstract class  AbustractComposite implements IfComponent {
+public abstract class AbustractComposite implements IfComponent {
 
 	private List<IfComponent> components = new ArrayList<IfComponent>();
 
-	@Override
 	public void add(IfComponent component) {
 		components.add(component);
 	}

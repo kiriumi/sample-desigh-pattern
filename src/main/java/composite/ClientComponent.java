@@ -1,6 +1,6 @@
 package composite;
 
-public class ComponentClient {
+public class ClientComponent {
 
 	public static void main(String[] args) {
 
