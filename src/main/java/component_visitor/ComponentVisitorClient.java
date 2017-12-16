@@ -4,28 +4,24 @@ public class ComponentVisitorClient {
 
 	public static void main(String... args) {
 
-		IfComponentAcceptable component0 = createComponent0();
+		IfComponentAcceptable rootComponent = createRootComponent();
 
-		IfComponentVisitable visitor1 = new ComponentVisitor1();
-		component0.accept(visitor1);
-
-		IfComponentVisitable visitor2 = new ComponentVisitor2();
-		component0.accept(visitor2);
+		IfComponentVisitable visitor = new ComponentVisitor();
+		rootComponent.accept(visitor);
 	}
 
-	private static  IfComponentAcceptable  createComponent0() {
+	private static IfComponentAcceptable createRootComponent() {
 
-		IfComponentAcceptable component0 = new AcceptableComposite0();
-		IfComponentAcceptable component1 = new AcceptableComposite1();
-		IfComponentAcceptable leaf1 = new AcceptableLeaf1();
-		IfComponentAcceptable leaf2 = new AcceptableLeaf2();
+		IfComponentAcceptable rootComponent = new AcceptableComposite("RootComponent");
+		IfComponentAcceptable component1 = new AcceptableComposite("SubComponent");
+		IfComponentAcceptable leaf1 = new AcceptableLeaf("Leaf1");
+		IfComponentAcceptable leaf2 = new AcceptableLeaf("Leaf2");
 
 		component1.add(leaf2);
-		component0.add(leaf1);
-		component0.add(component1);
+		rootComponent.add(leaf1);
+		rootComponent.add(component1);
 
-		return component0;
-
+		return rootComponent;
 
 	}
 

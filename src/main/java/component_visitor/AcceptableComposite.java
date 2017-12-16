@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class AcceptableComposite0 implements IfComponentAcceptable {
+public class AcceptableComposite implements IfComponentAcceptable {
 
-	List<IfComponentAcceptable> components = new ArrayList<IfComponentAcceptable>();
+	private List<IfComponentAcceptable> components = new ArrayList<IfComponentAcceptable>();
+
+	private final String name;
+
+	public AcceptableComposite(String name) {
+		this.name = name;
+	}
 
 	@Override
 	public void add(IfComponentAcceptable component) {
@@ -20,7 +26,10 @@ public class AcceptableComposite0 implements IfComponentAcceptable {
 
 		Stream<IfComponentAcceptable> stream = components.stream();
 		stream.forEach(component -> component.accept(visitor));
+	}
 
+	public String getName() {
+		return name;
 	}
 
 }
