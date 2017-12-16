@@ -4,16 +4,21 @@ import util.Utils;
 
 public class Visitor2 implements IfVisitable {
 
+	@Override
 	public void visit(Acceptor1 acceptor) {
 
-		System.out.print("I'm " + Utils.getSimpleClassName(this) + ", ");
-		System.out.println("Hello " + Utils.getSimpleClassName(acceptor));
+		Utils.giveMyName(this);
+		Utils.greet(acceptor);
+
+		Utils.printNewLine();
 	}
 
+	@Override
 	public void visit(Acceptor2 acceptor) {
 
-		System.out.print("I'm " + Utils.getSimpleClassName(this) + ", ");
-		System.out.println("Hello " + Utils.getSimpleClassName(acceptor));
-	}
+		Utils.giveMyName(this);
+		Utils.greet(acceptor);
 
+		Utils.printNewLine();
+	}
 }

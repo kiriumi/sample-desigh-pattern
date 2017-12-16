@@ -1,7 +1,5 @@
 package visitor;
 
-import util.Utils;
-
 /**
  * Visitorのインターフェース
  * @author Kengo
@@ -9,9 +7,7 @@ import util.Utils;
  */
 public interface IfVisitable {
 
-	public default void visit(IfAcceptable acceptor) {
+	public void visit(Acceptor1 acceptor1);
 
-		System.out.print("I'm " + Utils.getSimpleClassName(this) + ", ");
-		System.out.println("Hello " + Utils.getSimpleClassName(acceptor));
-	}
+	public void visit(Acceptor2 acceptor2);
 }
