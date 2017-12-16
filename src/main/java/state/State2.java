@@ -2,11 +2,11 @@ package state;
 
 import util.Utils;
 
-public class State2 extends AbstractState {
+public class State2 implements IfState {
 
 	@Override
 	public void execute() {
-		Utils.greet(this.state);
+		Utils.greet(this);
 	}
 
 }
