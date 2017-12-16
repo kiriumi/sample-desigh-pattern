@@ -9,8 +9,9 @@ public class ClientCompany {
 	public static void main(String... args) {
 
 		List<Employee> employees = Arrays.asList(
-				new Employee("engineer", new Engineer()),
-				new Employee("manager", new Manager()));
+				new Employee("Engineer1", new Engineer()),
+				new Employee("Engineer2", new Engineer()),
+				new Employee("Manager", new Manager()));
 
 		Stream<Employee> stream = employees.stream();
 		stream.forEach(employee -> employee.print());
