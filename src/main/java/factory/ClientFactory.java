@@ -1,4 +1,6 @@
-package factorymethod;
+package factory;
+
+import factorymethod.IfProduct;
 
 public class ClientFactory {
 
