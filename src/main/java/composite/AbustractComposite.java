@@ -17,7 +17,7 @@ public abstract class AbustractComposite implements IfComponent {
 	@Override
 	public void execute() {
 
-		System.out.println("Hello " + Utils.getSimpleClassName(this));
+		Utils.greet(this);
 
 		Stream<IfComponent> stream = components.stream();
 		stream.forEach(component -> component.execute());
