@@ -12,6 +12,11 @@ import factorymethod.Product2;
  */
 public final class Factory {
 
+	public static IfProduct create() {
+
+		return new Product1();
+	}
+
 	public static IfProduct create(int i) {
 
 		if (i == 1) {
