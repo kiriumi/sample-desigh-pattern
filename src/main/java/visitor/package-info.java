@@ -1,6 +1,6 @@
 /**
- * Visitorパターン
- * 処理を渡す
+ * VisitorをAcceptorに派遣し、Visitorに処理実施してもらう
+ *   ※処理オブジェクトを渡すイメージ
  */
 /**
  * @author Kengo
