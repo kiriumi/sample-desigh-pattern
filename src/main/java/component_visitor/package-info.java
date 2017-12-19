@@ -1,8 +1,9 @@
 /**
  * CompositeパターンにVisitorパターンの組合せ
  *
- * Componentにaccept()を用意
- * 各種ComponentにVisitorが行き、処理（visit()）を実施
+ * ポイント
+ * ・Component（=Acceptor）にaccept()を用意
+ * ・各ComponentにVisitorが行き、処理（visit()）を実施
  *
  * サンプルの構成
  *
