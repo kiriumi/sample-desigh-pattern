@@ -11,7 +11,7 @@ public class ClientStragegyFactory {
 				new Battle("Battle2", new Strategy2Factory()),
 				new Battle("Battle3", new Strategy1Factory()));
 
-		stream.forEach(battle -> battle.doStragety());
-
+		stream.forEach(battle -> battle.executeStragety());
 	}
+
 }
