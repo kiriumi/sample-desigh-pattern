@@ -19,11 +19,7 @@ public class FlyweightFactory {
 
 	public Flyweight getFlyweight(String name) {
 
-		if (!flyweightMap.containsKey(name)) {
-
-			Flyweight newFlyweight = new Flyweight(name);
-			flyweightMap.put(name, newFlyweight);
-		}
+		flyweightMap.putIfAbsent(name, new Flyweight(name));
 
 		return flyweightMap.get(name);
 	}
