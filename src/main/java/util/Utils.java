@@ -1,5 +1,7 @@
 package util;
 
+import org.apache.commons.io.FilenameUtils;
+
 public final class Utils {
 
 	private Utils() {
@@ -28,5 +30,15 @@ public final class Utils {
 
 	public static String getSimpleClassName(Object obj) {
 		return obj.getClass().getSimpleName();
+	}
+
+	public static void whoDidIt() {
+
+		StackTraceElement targetStackTrace = Thread.currentThread().getStackTrace()[2];
+
+		String className = FilenameUtils.getBaseName(targetStackTrace.getFileName());
+		String methodName = targetStackTrace.getMethodName();
+
+		System.out.println(className + " done " + methodName);
 	}
 }
