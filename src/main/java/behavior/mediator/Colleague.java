@@ -1,5 +1,7 @@
 package behavior.mediator;
 
+import util.Utils;
+
 public class Colleague extends AbstractColleague {
 
 	public Colleague(String key) {
@@ -14,14 +16,13 @@ public class Colleague extends AbstractColleague {
 
 	@Override
 	public void execute1() {
-		System.out.println("execute1");
+		Utils.whoDidIt();
 
 	}
 
 	@Override
 	public void execute2() {
-
-		System.out.println("execute2");
+		Utils.whoDidIt();
 	}
 
 }
