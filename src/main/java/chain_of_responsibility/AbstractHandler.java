@@ -2,7 +2,7 @@ package chain_of_responsibility;
 
 public abstract class AbstractHandler {
 
-	protected int level = Question.EASY.getLevel();
+	protected int level;
 
 	private AbstractHandler next;
 
