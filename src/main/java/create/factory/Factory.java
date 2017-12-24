@@ -19,10 +19,6 @@ public final class Factory {
 
 	public static IfProduct create(int i) {
 
-		if (i == 1) {
-			return new Product1();
-		} else {
-			return new Product2();
-		}
+		return (i == 1) ? new Product1() : new Product2();
 	}
 }

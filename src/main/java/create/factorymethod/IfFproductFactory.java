@@ -6,7 +6,9 @@ package create.factorymethod;
  * @author Kengo
  *
  */
-public interface IfFactory {
+public interface IfFproductFactory {
 
-	public IfProduct create();
+	public static IfProduct create() {
+		return new ProductNull();
+	}
 }

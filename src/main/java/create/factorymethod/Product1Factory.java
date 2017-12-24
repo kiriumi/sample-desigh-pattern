@@ -1,9 +1,8 @@
 package create.factorymethod;
 
-public class Product1Factory implements IfFactory {
+public class Product1Factory implements IfFproductFactory {
 
-	@Override
-	public IfProduct create() {
+	public static IfProduct create() {
 		return new Product1();
 	}
 
