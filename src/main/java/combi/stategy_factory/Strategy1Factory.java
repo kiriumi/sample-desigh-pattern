@@ -1,7 +1,7 @@
 package combi.stategy_factory;
 
-import behavior.strategy.IfStrategy;
-import behavior.strategy.Strategy1;
+import sepalate_process.strategy.IfStrategy;
+import sepalate_process.strategy.Strategy1;
 
 public class Strategy1Factory implements IfStrategyFactory {
 

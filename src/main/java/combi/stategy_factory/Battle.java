@@ -1,6 +1,6 @@
 package combi.stategy_factory;
 
-import behavior.strategy.IfStrategy;
+import sepalate_process.strategy.IfStrategy;
 
 public class Battle {
 
